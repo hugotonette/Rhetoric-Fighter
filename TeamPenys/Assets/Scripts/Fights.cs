@@ -88,14 +88,18 @@ public class Fights : MonoBehaviour
             if (_timeLeft > 1)
             {
                 Maintime.pausado = true;
+                if(Maintime._timeLeft == 99)
+                {
+                    RefereeTimer.GetComponent<Text>().text = "Round\n" + Round;
+                }
                 _timeLeft = _timeLeft - Time.deltaTime;
-                RefereeTimer.GetComponent<Text>().text = Mathf.Round(_timeLeft).ToString();
+                //RefereeTimer.GetComponent<Text>().text = Mathf.Round(_timeLeft).ToString();
             }
             else
             {
-                
+         
                 SimplesWait();
-                RefereeTimer.GetComponent<Text>().text = "GO";
+                //RefereeTimer.GetComponent<Text>().text = "GO";
                 Maintime.pausado = false;
                 Maintime.inicio = true;
             }

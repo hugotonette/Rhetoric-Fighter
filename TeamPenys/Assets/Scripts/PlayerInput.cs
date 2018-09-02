@@ -9,9 +9,12 @@ public class PlayerInput : MonoBehaviour
     public ComboPrompt ComboPromptScript;
     public Fights FightsScript;
     public KeyCode ConfirmKey;
+    public KeyCode Secondkey;
     public bool LeftSide = true;
     [HideInInspector] public bool AbleToClick = false;
     public List<KeyCode> _playerInputs = new List<KeyCode>();
+    Animator P_anim;
+    public GameObject player;
 
     private int count = 0;
     private int Signal = 1;
@@ -27,9 +30,11 @@ public class PlayerInput : MonoBehaviour
         Debug.Log("Acertou Miseravi");
         return true;
     }
+    
 
     private void Start()
     {
+        P_anim = player.GetComponent<Animator>();
         if (LeftSide == true)
             Signal = 1;
         else
@@ -55,10 +60,11 @@ public class PlayerInput : MonoBehaviour
             {
                 if (_playerInputs.Count == ComboPromptScript.InputsChosen.Count)
                 {
-                    if (VerifyInput(ComboPromptScript.InputsChosen, _playerInputs) && ComboPromptScript.InputsChosen.Count != 0)
+                    if (VerifyInput(ComboPromptScript.InputsChosen, _playerInputs) /*&& ComboPromptScript.InputsChosen.Count != 0*/)
                     {
                         Debug.Log("Correct");
                         HPBarScript.GetComponent<Slider>().value = HPBarScript.GetComponent<Slider>().value + (Signal * HPBarScript.Damage);
+                        P_anim.SetTrigger("Golpeando");
                         count = 0;
                         _playerInputs.Clear();
                         ComboPromptScript.InputsChosen.Clear();
@@ -69,6 +75,7 @@ public class PlayerInput : MonoBehaviour
                     {
                         Debug.Log("Wrong");
                         HPBarScript.GetComponent<Slider>().value = HPBarScript.GetComponent<Slider>().value - (Signal * HPBarScript.Damage);
+                        P_anim.SetTrigger("Hit");
                         count = 0;
                         _playerInputs.Clear();
                         ComboPromptScript.InputsChosen.Clear();
@@ -85,6 +92,14 @@ public class PlayerInput : MonoBehaviour
                     ComboPromptScript.InputsChosen.Clear();
                     FightsScript.NewRound();
                 }
+            }
+            else if(Input.GetKeyDown(Secondkey))
+            {
+                P_anim.SetTrigger("Hit");
+                count = 0;
+                _playerInputs.Clear();
+                ComboPromptScript.InputsChosen.Clear();
+                FightsScript.NewRound();
             }
         }
     }
