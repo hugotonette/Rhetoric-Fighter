@@ -7,7 +7,7 @@ public class HPBar : MonoBehaviour
 {
     public Rounder RounderScriptP1;
     public Rounder RounderScriptP2;
-    public int Damage = 100;
+    public int Damage = 25;
     [HideInInspector] public bool Result;
     [HideInInspector] public bool _check = false;
 

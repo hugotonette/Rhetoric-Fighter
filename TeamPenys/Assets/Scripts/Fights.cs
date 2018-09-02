@@ -110,10 +110,10 @@ public class Fights : MonoBehaviour
                 Maintime.inicio = true;
             }
         }
-        else
+        /*else
         {
             _timeLeft = 3;
             RefereeTimer.GetComponent<Text>().text = "";
-        }
+        }*/
     }
 }

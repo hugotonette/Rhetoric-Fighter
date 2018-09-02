@@ -17,7 +17,7 @@ public class GlobalTimer : MonoBehaviour
         _timeLeft = TimerMax;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (_timeLeft >= 0 && inicio && !pausado)
         {
