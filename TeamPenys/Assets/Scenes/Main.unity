@@ -619,14 +619,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.11836952, b: 0.68415755, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 01f6d2ae3a33be1439f8bc6b663da5db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1054,10 +1054,10 @@ MonoBehaviour:
   ComboPromptGameObject: {fileID: 1923652900}
   ComboInput: 77000000610000007300000064000000
   InputSprites:
-  - {fileID: 21300000, guid: 4c19f3cff784ee84fb5426d8cff329c8, type: 3}
-  - {fileID: 21300000, guid: df228c60ef068464ebe618ae8ffa721e, type: 3}
-  - {fileID: 21300000, guid: 097446f2d9c86004f81bc4b495d8d36e, type: 3}
-  - {fileID: 21300000, guid: 5a110583498f858419e230250f5c8fb9, type: 3}
+  - {fileID: 21300000, guid: 44240fe6a97b64a1290e52ab284c5c17, type: 3}
+  - {fileID: 21300000, guid: 5ea1953bb195a4e81bae2ac2c88dc980, type: 3}
+  - {fileID: 21300000, guid: d584a09f0be1642e6bfc4255c720de92, type: 3}
+  - {fileID: 21300000, guid: 9fb7f60c6f9ff4ab697ba32039dcba1f, type: 3}
   CanvasInputSprites: []
   InputsChosen: 
 --- !u!1 &1046236262
@@ -1627,10 +1627,10 @@ MonoBehaviour:
   ComboPromptGameObject: {fileID: 803437781}
   ComboInput: 11010000120100001401000013010000
   InputSprites:
-  - {fileID: 21300000, guid: 4c19f3cff784ee84fb5426d8cff329c8, type: 3}
-  - {fileID: 21300000, guid: df228c60ef068464ebe618ae8ffa721e, type: 3}
-  - {fileID: 21300000, guid: 097446f2d9c86004f81bc4b495d8d36e, type: 3}
-  - {fileID: 21300000, guid: 5a110583498f858419e230250f5c8fb9, type: 3}
+  - {fileID: 21300000, guid: 7f15a338e079a4844a789830184255ba, type: 3}
+  - {fileID: 21300000, guid: a8c24c81bf38b4a90a38b9ec318e692e, type: 3}
+  - {fileID: 21300000, guid: b548736aa5a5e40968cff64d9f43af60, type: 3}
+  - {fileID: 21300000, guid: 522340d64edec4532b1800ca793cf405, type: 3}
   CanvasInputSprites: []
   InputsChosen: 
 --- !u!1 &1731598069
@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fefe1c5ce6d4a14995efae86f01efd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 25
   Result: 0
   _check: 0
 --- !u!1 &2021651603
@@ -2196,14 +2196,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.11836952, b: 0.68415755, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 01f6d2ae3a33be1439f8bc6b663da5db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

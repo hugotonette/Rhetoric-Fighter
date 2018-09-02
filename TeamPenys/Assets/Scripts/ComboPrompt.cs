@@ -10,8 +10,9 @@ public class ComboPrompt : MonoBehaviour
     public KeyCode[] ComboInput;                                                                         // What inputs to recognize ***
     [Tooltip("Needs to be in the same order as ComboInput")] public Sprite[] InputSprites;               // Images to use (need to put in the same order as ComboInput ***
     [HideInInspector] public Image[] CanvasInputSprites;                                                                // Get Images of the canvas ***
-    [HideInInspector] public List<KeyCode> InputsChosen = new List<KeyCode>();                                          // Inputs to the player to enter
-    
+    //[HideInInspector]
+    public List<KeyCode> InputsChosen = new List<KeyCode>(4);                                          // Inputs to the player to enter
+
     private int GetRandomInputKey(int size)
     {
         return Random.Range(0, size);
@@ -19,9 +20,8 @@ public class ComboPrompt : MonoBehaviour
 
     public void RandomInputs()
     {
-        if (CanvasInputSprites != null)
-        {
-            foreach (Image image in CanvasInputSprites)
+        foreach (Image image in CanvasInputSprites)
+        {            if (InputsChosen.Count < ComboPromptGameObject.GetComponentsInChildren<Image>().Length)
             {
                 int num = GetRandomInputKey(ComboInput.Length);
                 image.sprite = InputSprites[num];

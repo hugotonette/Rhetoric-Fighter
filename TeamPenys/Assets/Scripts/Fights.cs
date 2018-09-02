@@ -50,16 +50,15 @@ public class Fights : MonoBehaviour
     {
         foreach (GameObject item in PromptP1)
             item.SetActive(state);
-        PlayerInputScriptP1.enabled = state;
+        PlayerInputScriptP1.enabled = !state;
         foreach (GameObject item in PromptP2)
             item.SetActive(state);
-        PlayerInputScriptP1.enabled = state;
+        PlayerInputScriptP2.enabled = !state;
     }
 
     public void NewRound()
     {
         StartCoroutine(TimeToWait());
-        //StartCoroutine(WaitPrompt());
     }
 
     private void Start()
@@ -73,17 +72,20 @@ public class Fights : MonoBehaviour
         {
             if (_timeLeft > 1)
             {
+                Maintime.pausado = true;
                 _timeLeft = _timeLeft - Time.deltaTime;
                 RefereeTimer.GetComponent<Text>().text = Mathf.Round(_timeLeft).ToString();
             }
             else
             {
                 RefereeTimer.GetComponent<Text>().text = "GO";
+                Maintime.pausado = false;
                 Maintime.inicio = true;
             }
         }
         else
         {
+            _timeLeft = 3;
             RefereeTimer.GetComponent<Text>().text = "";
         }
 

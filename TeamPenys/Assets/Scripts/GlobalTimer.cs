@@ -10,6 +10,7 @@ public class GlobalTimer : MonoBehaviour
     private float _timeLeft;
 
     public bool inicio = false;
+    public bool pausado = false;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class GlobalTimer : MonoBehaviour
 
     private void Update()
     {
-        if (_timeLeft >= 0 && inicio == true)
+        if (_timeLeft >= 0 && inicio == true && pausado == false)
         {
             _timeLeft = _timeLeft - Time.deltaTime;
             this.GetComponent<Text>().text = Mathf.Round(_timeLeft).ToString();
