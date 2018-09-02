@@ -1287,7 +1287,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 718556501}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &719273362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1623,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1633340674}
+  - {fileID: 1823151263}
   - {fileID: 2110085695}
   - {fileID: 803437782}
   m_Father: {fileID: 2092241009}
@@ -1932,8 +1932,8 @@ MonoBehaviour:
   PromptP1:
   - {fileID: 718556501}
   - {fileID: 1923652900}
-  ComboScriptP2: {fileID: 1633340676}
-  PlayerInputScriptP2: {fileID: 1633340675}
+  ComboScriptP2: {fileID: 1823151265}
+  PlayerInputScriptP2: {fileID: 1823151264}
   P2: {fileID: 1657900919}
   PromptP2:
   - {fileID: 2110085694}
@@ -2416,84 +2416,6 @@ Transform:
   m_Father: {fileID: 639628673}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1633340673
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1633340674}
-  - component: {fileID: 1633340676}
-  - component: {fileID: 1633340675}
-  m_Layer: 5
-  m_Name: P2ComboScript
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1633340674
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1633340673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 990261938}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1633340675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1633340673}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5efb5c7d2f52a4186e4ad539f08491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBarScript: {fileID: 1971283219}
-  ComboPromptScript: {fileID: 1633340676}
-  FightsScript: {fileID: 1374697985}
-  ConfirmKey: 13
-  Secondkey: 32
-  LeftSide: 0
-  AbleToClick: 0
-  _playerInputs: 
-  P_anim: {fileID: 53959236}
-  P_animOther: {fileID: 598568385}
-  player: {fileID: 53959234}
---- !u!114 &1633340676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1633340673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5525bf1fad16a464baa87d187f9bc24a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FightsScript: {fileID: 1374697985}
-  ComboPromptGameObject: {fileID: 803437781}
-  ComboInput: 11010000120100001401000013010000
-  InputSprites:
-  - {fileID: 21300000, guid: 6e69ac2c4da6e134299c8d02f238fcd0, type: 3}
-  - {fileID: 21300000, guid: 8c36ee72596913d47b962174a91a3022, type: 3}
-  - {fileID: 21300000, guid: 6afee94546776f34bb90ecea7935ab2b, type: 3}
-  - {fileID: 21300000, guid: 8241d62001fdbe74393e32cf9d7d3b93, type: 3}
-  CanvasInputSprites: []
-  InputsChosen: 
 --- !u!1 &1657900918
 GameObject:
   m_ObjectHideFlags: 0
@@ -2746,6 +2668,84 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1788280615}
   m_CullTransparentMesh: 0
+--- !u!1 &1823151262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1823151263}
+  - component: {fileID: 1823151265}
+  - component: {fileID: 1823151264}
+  m_Layer: 5
+  m_Name: P2ComboScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1823151263
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823151262}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 990261938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -444.4, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1823151264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823151262}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5efb5c7d2f52a4186e4ad539f08491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarScript: {fileID: 1971283219}
+  ComboPromptScript: {fileID: 1823151265}
+  FightsScript: {fileID: 1374697985}
+  ConfirmKey: 13
+  Secondkey: 32
+  LeftSide: 0
+  AbleToClick: 0
+  _playerInputs: 
+  P_anim: {fileID: 53959236}
+  P_animOther: {fileID: 598568385}
+  player: {fileID: 53959234}
+--- !u!114 &1823151265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1823151262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5525bf1fad16a464baa87d187f9bc24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightsScript: {fileID: 1374697985}
+  ComboPromptGameObject: {fileID: 803437781}
+  ComboInput: 11010000120100001401000013010000
+  InputSprites:
+  - {fileID: 21300000, guid: 6e69ac2c4da6e134299c8d02f238fcd0, type: 3}
+  - {fileID: 21300000, guid: 8c36ee72596913d47b962174a91a3022, type: 3}
+  - {fileID: 21300000, guid: 6afee94546776f34bb90ecea7935ab2b, type: 3}
+  - {fileID: 21300000, guid: 8241d62001fdbe74393e32cf9d7d3b93, type: 3}
+  CanvasInputSprites: []
+  InputsChosen: 
 --- !u!1 &1872657593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3074,7 +3074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RounderScriptP1: {fileID: 441958542}
   RounderScriptP2: {fileID: 1657900919}
-  Damage: 100
+  Damage: 25
   Result: 0
   _check: 0
 --- !u!1 &2009395089
@@ -3346,4 +3346,4 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2110085694}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
