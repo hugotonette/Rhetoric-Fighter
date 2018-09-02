@@ -8,15 +8,17 @@ public class Fights : MonoBehaviour
     public GameObject RefereeTimer;
     public GlobalTimer Maintime;
     [Range(0, 5)] public float TotalTimeBetweenRounds = 3;
+    [Space] [Header("P1 Scripts")]
     public ComboPrompt ComboScriptP1;
     public PlayerInput PlayerInputScriptP1;
+    public Rounder P1;
     public GameObject[] PromptP1;
-    [Space]
+    [Space] [Header("P2 Scripts")]
     public ComboPrompt ComboScriptP2;
     public PlayerInput PlayerInputScriptP2;
-    public GameObject[] PromptP2;
-    public Rounder P1;
     public Rounder P2;
+    public GameObject[] PromptP2;
+    [Space]
     private int Round = 1;
     [Range(0, 5)] public float tempoMostrando = 3;
     
@@ -36,8 +38,8 @@ public class Fights : MonoBehaviour
     {
         _canCooldown = true;
         yield return new WaitForSeconds(TotalTimeBetweenRounds);
-        StartCoroutine(WaitPrompt());
         _canCooldown = false;
+        StartCoroutine(WaitPrompt());
     }
 
     IEnumerator WaitPrompt()
@@ -88,6 +90,7 @@ public class Fights : MonoBehaviour
             Round = 2;
         else if (P1.Vitorias == 1 && P2.Vitorias == 1)
             Round = 3;
+
         if (_canCooldown)
         {
             if (_timeLeft > 1)
@@ -102,7 +105,6 @@ public class Fights : MonoBehaviour
             }
             else
             {
-         
                 SimplesWait();
                 //RefereeTimer.GetComponent<Text>().text = "GO";
                 Maintime.pausado = false;
@@ -114,7 +116,5 @@ public class Fights : MonoBehaviour
             _timeLeft = 3;
             RefereeTimer.GetComponent<Text>().text = "";
         }
-
     }
-
 }

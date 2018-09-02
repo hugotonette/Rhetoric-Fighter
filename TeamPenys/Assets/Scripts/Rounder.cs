@@ -8,14 +8,13 @@ public class Rounder : MonoBehaviour
     public Victory VictoryScript;
     [Range(1, 2)] public int PlayerNumber;
 
-    public int Vitorias = 0;
+    [HideInInspector] public int Vitorias = 0;
 
     public void GiveMedal()
     {
         if (Vitorias <= 1)
         {
             gameObject.transform.GetChild(Vitorias).gameObject.SetActive(true);
-            //GlobalTimerScript.RestartClock();
             Vitorias++;
             GlobalTimerScript._timeLeft = 99;
             if(Vitorias > 1)

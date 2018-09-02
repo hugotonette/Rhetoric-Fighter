@@ -20,11 +20,13 @@ public class ComboPrompt : MonoBehaviour
     public void RandomInputs()
     {
         foreach (Image image in CanvasInputSprites)
-        {            if (InputsChosen.Count < ComboPromptGameObject.GetComponentsInChildren<Image>().Length)
+        {
+            if (InputsChosen.Count < ComboPromptGameObject.GetComponentsInChildren<Image>().Length)
             {
                 int num = GetRandomInputKey(ComboInput.Length);
                 image.sprite = InputSprites[num];
                 InputsChosen.Add(ComboInput[num]);
+                Debug.Log("RANDOM" + this.gameObject.name);
             }
         }
     }

@@ -12,11 +12,6 @@ public class GlobalTimer : MonoBehaviour
     public bool inicio = false;
     public bool pausado = false;
 
-    public void RestartClock()
-    {
-        _timeLeft = TimerMax;
-    }
-
     private void Start()
     {
         _timeLeft = TimerMax;
