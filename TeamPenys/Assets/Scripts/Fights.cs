@@ -69,7 +69,12 @@ public class Fights : MonoBehaviour
 
     public void NewRound()
     {
-        StartCoroutine(TimeToWait());
+        if(P1.Vitorias != 2 || P2.Vitorias != 2)
+            StartCoroutine(TimeToWait());
+        else
+        {
+            Debug.Log("Fim de jogo");
+        }
     }
 
     private void Start()
