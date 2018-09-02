@@ -9,6 +9,7 @@ public class PlayerInput : MonoBehaviour
     public ComboPrompt ComboPromptScript;
     public Fights FightsScript;
     public KeyCode ConfirmKey;
+    public KeyCode Secondkey;
     public bool LeftSide = true;
     [HideInInspector] public bool AbleToClick = false;
     [HideInInspector] public List<KeyCode> _playerInputs = new List<KeyCode>();
@@ -18,17 +19,15 @@ public class PlayerInput : MonoBehaviour
 
     private int count = 0;
     private int Signal = 1;
-    
+
     private bool VerifyInput(List<KeyCode> original, List<KeyCode> player)
     {
         for (int i = 0; i < original.Count; i++)
             if (original[i] != player[i])
-            {
                 return false;
-            }
         return true;
     }
-    
+
 
     private void Start()
     {
@@ -97,6 +96,15 @@ public class PlayerInput : MonoBehaviour
                     ComboPromptScript.InputsChosen.Clear();
                     FightsScript.NewRound();
                 }
+            }
+            else if (Input.GetKeyDown(Secondkey))
+            {
+                //P_anim.SetTrigger("Golpeando");
+                //P_animOther.SetTrigger("Hit");
+                count = 0;
+                _playerInputs.Clear();
+                ComboPromptScript.InputsChosen.Clear();
+                FightsScript.NewRound();
             }
         }
     }

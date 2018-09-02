@@ -55,7 +55,6 @@ public class Fights : MonoBehaviour
         RefereeTimer.GetComponent<Text>().text = "Round" + Round;
         yield return new WaitForSeconds(10);
     }
-
     private void SetActivePrompt(bool state)
     {
         PlayerInputScriptP1.AbleToClick = !state;

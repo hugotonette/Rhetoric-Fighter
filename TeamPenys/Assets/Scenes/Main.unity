@@ -122,7 +122,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5261773}
   - component: {fileID: 5261774}
-  - component: {fileID: 5261775}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -238,17 +237,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &5261775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5261772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d1acb06fd940d4c956f0dc4e646f6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &13256656
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,8 +941,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d5bd05e86790fd04487e63b26cb05954, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1242,7 +1230,7 @@ GameObject:
   - component: {fileID: 718556504}
   - component: {fileID: 718556503}
   m_Layer: 5
-  m_Name: PromptBackground
+  m_Name: P1PromptBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1333,7 +1321,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &719273364
 MonoBehaviour:
@@ -1354,8 +1342,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d5bd05e86790fd04487e63b26cb05954, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1449,7 +1437,7 @@ GameObject:
   - component: {fileID: 803437785}
   - component: {fileID: 803437784}
   m_Layer: 5
-  m_Name: ComboPrompt
+  m_Name: P2ComboPrompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1657,7 +1645,7 @@ GameObject:
   - component: {fileID: 1033042059}
   - component: {fileID: 1033042058}
   m_Layer: 5
-  m_Name: ComboScript
+  m_Name: P1ComboScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1696,6 +1684,7 @@ MonoBehaviour:
   ComboPromptScript: {fileID: 1033042059}
   FightsScript: {fileID: 1374697985}
   ConfirmKey: 32
+  Secondkey: 13
   LeftSide: 1
   AbleToClick: 0
   _playerInputs: 
@@ -1939,16 +1928,16 @@ MonoBehaviour:
   TotalTimeBetweenRounds: 3
   ComboScriptP1: {fileID: 1033042059}
   PlayerInputScriptP1: {fileID: 1033042058}
+  P1: {fileID: 441958542}
   PromptP1:
   - {fileID: 718556501}
   - {fileID: 1923652900}
   ComboScriptP2: {fileID: 1633340676}
   PlayerInputScriptP2: {fileID: 1633340675}
+  P2: {fileID: 1657900919}
   PromptP2:
   - {fileID: 2110085694}
   - {fileID: 803437781}
-  P1: {fileID: 441958542}
-  P2: {fileID: 1657900919}
   tempoMostrando: 3
 --- !u!1 &1434480077
 GameObject:
@@ -2438,7 +2427,7 @@ GameObject:
   - component: {fileID: 1633340676}
   - component: {fileID: 1633340675}
   m_Layer: 5
-  m_Name: ComboScript
+  m_Name: P2ComboScript
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2477,6 +2466,7 @@ MonoBehaviour:
   ComboPromptScript: {fileID: 1633340676}
   FightsScript: {fileID: 1374697985}
   ConfirmKey: 13
+  Secondkey: 32
   LeftSide: 0
   AbleToClick: 0
   _playerInputs: 
@@ -2854,7 +2844,7 @@ GameObject:
   - component: {fileID: 1923652905}
   - component: {fileID: 1923652903}
   m_Layer: 5
-  m_Name: ComboPrompt
+  m_Name: P1ComboPrompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3187,8 +3177,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -5, y: 0}
-  m_SizeDelta: {x: -20, y: 0}
+  m_AnchoredPosition: {x: 5, y: 0}
+  m_SizeDelta: {x: 0.00000047683716, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2092241005
 GameObject:
@@ -3299,7 +3289,7 @@ GameObject:
   - component: {fileID: 2110085697}
   - component: {fileID: 2110085696}
   m_Layer: 5
-  m_Name: PromptBackground
+  m_Name: P2PromptBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
