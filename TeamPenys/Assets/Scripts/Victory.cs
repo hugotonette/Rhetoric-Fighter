@@ -5,8 +5,19 @@ using UnityEngine.UI;
 
 public class Victory : MonoBehaviour
 {
-    public void WinGame(int playerNum)
+    public Rounder P1Rounder;
+    public Rounder P2Rounder;
+    public GameObject GameOverScreen;
+
+    public GameObject[] ThingsToDisable;
+
+    private void Update()
     {
-        this.GetComponent<Text>().text = playerNum + "Wins";
+        if(P1Rounder.Vitorias >= 2 || P2Rounder.Vitorias >= 2)
+        {
+            GameOverScreen.SetActive(true);
+            foreach (GameObject item in ThingsToDisable)
+                item.SetActive(false);
+        }
     }
 }
