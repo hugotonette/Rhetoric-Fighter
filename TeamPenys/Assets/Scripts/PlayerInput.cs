@@ -7,7 +7,9 @@ public class PlayerInput : MonoBehaviour
 {
     public HPBar HPBarScript;
     public ComboPrompt ComboPromptScript;
+    public Fights FightsScript;
     public KeyCode ConfirmKey;
+    public bool LeftSide = true;
     [HideInInspector] public bool VerifyResult = false;
 
     private List<KeyCode> _playerInputs = new List<KeyCode>();
@@ -22,6 +24,14 @@ public class PlayerInput : MonoBehaviour
                 return false;
         }
         return true;
+    }
+
+    private void Start()
+    {
+        if (LeftSide == true)
+            Signal = 1;
+        else
+            Signal = -1;
     }
 
     private void Update()
@@ -47,20 +57,20 @@ public class PlayerInput : MonoBehaviour
                 {
                     Debug.Log("Correct");
                     HPBarScript.GetComponent<Slider>().value = HPBarScript.GetComponent<Slider>().value + (Signal * HPBarScript.Damage);
-                    //NewRound();
+                    FightsScript.NewRound();
                 }
                 else
                 {
                     Debug.Log("Wrong");
                     HPBarScript.GetComponent<Slider>().value = HPBarScript.GetComponent<Slider>().value - (Signal * HPBarScript.Damage);
-                    //NewRound();
+                    FightsScript.NewRound();
                 }
             }
             else
             {
                 Debug.Log("Wrong");
                 HPBarScript.GetComponent<Slider>().value = HPBarScript.GetComponent<Slider>().value - (Signal * HPBarScript.Damage);
-                //NewRound();
+                FightsScript.NewRound();
             }
         }
     }
