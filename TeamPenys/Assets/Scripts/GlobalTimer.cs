@@ -7,10 +7,15 @@ public class GlobalTimer : MonoBehaviour
 {
     [Range(0, 99)] public float TimerMax = 99;
 
-    private float _timeLeft;
+    [HideInInspector] public float _timeLeft;
 
     public bool inicio = false;
     public bool pausado = false;
+
+    public void RestartClock()
+    {
+        _timeLeft = TimerMax;
+    }
 
     private void Start()
     {
@@ -19,7 +24,7 @@ public class GlobalTimer : MonoBehaviour
 
     private void Update()
     {
-        if (_timeLeft >= 0 && inicio == true && pausado == false)
+        if (_timeLeft >= 0 && inicio && !pausado)
         {
             _timeLeft = _timeLeft - Time.deltaTime;
             this.GetComponent<Text>().text = Mathf.Round(_timeLeft).ToString();

@@ -15,6 +15,9 @@ public class Fights : MonoBehaviour
     public ComboPrompt ComboScriptP2;
     public PlayerInput PlayerInputScriptP2;
     public GameObject[] PromptP2;
+    public Rounder P1;
+    public Rounder P2;
+    private int Round = 1;
     [Range(0, 5)] public float tempoMostrando = 3;
     
     private float _timeLeft;
@@ -45,12 +48,20 @@ public class Fights : MonoBehaviour
         yield return new WaitForSeconds(tempoMostrando);
         SetActivePrompt(false);
     }
+    IEnumerator SimplesWait()
+    {
+        RefereeTimer.GetComponent<Text>().text = "Round" + Round;
+        yield return new WaitForSeconds(10);
+    }
 
     private void SetActivePrompt(bool state)
     {
+        PlayerInputScriptP1.AbleToClick = !state;
         foreach (GameObject item in PromptP1)
             item.SetActive(state);
         PlayerInputScriptP1.enabled = !state;
+
+        PlayerInputScriptP2.AbleToClick = !state;
         foreach (GameObject item in PromptP2)
             item.SetActive(state);
         PlayerInputScriptP2.enabled = !state;
@@ -68,6 +79,10 @@ public class Fights : MonoBehaviour
 
     private void Update()
     {
+        if (P1.Vitorias == 1 || P2.Vitorias == 1)
+            Round = 2;
+        else if (P1.Vitorias == 1 && P2.Vitorias == 1)
+            Round = 3;
         if (_canCooldown)
         {
             if (_timeLeft > 1)
@@ -78,6 +93,8 @@ public class Fights : MonoBehaviour
             }
             else
             {
+                
+                SimplesWait();
                 RefereeTimer.GetComponent<Text>().text = "GO";
                 Maintime.pausado = false;
                 Maintime.inicio = true;

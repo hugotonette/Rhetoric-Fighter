@@ -10,8 +10,7 @@ public class ComboPrompt : MonoBehaviour
     public KeyCode[] ComboInput;                                                                         // What inputs to recognize ***
     [Tooltip("Needs to be in the same order as ComboInput")] public Sprite[] InputSprites;               // Images to use (need to put in the same order as ComboInput ***
     [HideInInspector] public Image[] CanvasInputSprites;                                                                // Get Images of the canvas ***
-    //[HideInInspector]
-    public List<KeyCode> InputsChosen = new List<KeyCode>(4);                                          // Inputs to the player to enter
+    [HideInInspector] public List<KeyCode> InputsChosen = new List<KeyCode>(4);                                          // Inputs to the player to enter
 
     private int GetRandomInputKey(int size)
     {
