@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimerMax: 99
+  inicio: 0
 --- !u!114 &569807718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +507,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00
+  m_Text: 99
 --- !u!222 &569807719
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -587,7 +588,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &718556502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -599,7 +600,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1438971695}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -618,14 +619,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.11836952, b: 0.68415755, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 01f6d2ae3a33be1439f8bc6b663da5db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -788,15 +789,13 @@ GameObject:
   - component: {fileID: 803437782}
   - component: {fileID: 803437785}
   - component: {fileID: 803437784}
-  - component: {fileID: 803437783}
-  - component: {fileID: 803437786}
   m_Layer: 5
   m_Name: ComboPrompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &803437782
 RectTransform:
   m_ObjectHideFlags: 0
@@ -812,32 +811,13 @@ RectTransform:
   - {fileID: 13256657}
   - {fileID: 1556419396}
   m_Father: {fileID: 990261938}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 89, y: -48.7}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &803437783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803437781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5525bf1fad16a464baa87d187f9bc24a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ComboInput: 11010000120100001401000013010000
-  InputSprites:
-  - {fileID: 21300000, guid: 4c19f3cff784ee84fb5426d8cff329c8, type: 3}
-  - {fileID: 21300000, guid: df228c60ef068464ebe618ae8ffa721e, type: 3}
-  - {fileID: 21300000, guid: 097446f2d9c86004f81bc4b495d8d36e, type: 3}
-  - {fileID: 21300000, guid: 5a110583498f858419e230250f5c8fb9, type: 3}
-  CanvasInputSprites: []
-  InputsChosen: 
 --- !u!114 &803437784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,21 +847,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 803437781}
   m_CullTransparentMesh: 0
---- !u!114 &803437786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 803437781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5efb5c7d2f52a4186e4ad539f08491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBarScript: {fileID: 1971283219}
-  ComboPromptScript: {fileID: 803437783}
-  ConfirmKey: 13
-  VerifyResult: 0
 --- !u!1 &821893148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1011,6 +976,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1633340674}
   - {fileID: 2110085695}
   - {fileID: 803437782}
   m_Father: {fileID: 2092241009}
@@ -1021,6 +987,79 @@ RectTransform:
   m_AnchoredPosition: {x: -104.8, y: -71.20001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1033042056
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1033042057}
+  - component: {fileID: 1033042059}
+  - component: {fileID: 1033042058}
+  m_Layer: 5
+  m_Name: ComboScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1033042057
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033042056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1438971695}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1033042058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033042056}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5efb5c7d2f52a4186e4ad539f08491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarScript: {fileID: 1971283219}
+  ComboPromptScript: {fileID: 1033042059}
+  FightsScript: {fileID: 1374697985}
+  ConfirmKey: 32
+  LeftSide: 1
+  VerifyResult: 0
+--- !u!114 &1033042059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033042056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5525bf1fad16a464baa87d187f9bc24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightsScript: {fileID: 1374697985}
+  ComboPromptGameObject: {fileID: 1923652900}
+  ComboInput: 77000000610000007300000064000000
+  InputSprites:
+  - {fileID: 21300000, guid: 44240fe6a97b64a1290e52ab284c5c17, type: 3}
+  - {fileID: 21300000, guid: 5ea1953bb195a4e81bae2ac2c88dc980, type: 3}
+  - {fileID: 21300000, guid: d584a09f0be1642e6bfc4255c720de92, type: 3}
+  - {fileID: 21300000, guid: 9fb7f60c6f9ff4ab697ba32039dcba1f, type: 3}
+  CanvasInputSprites: []
+  InputsChosen: 
 --- !u!1 &1046236262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1167,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefereeTimer: {fileID: 1577795322}
+  Maintime: {fileID: 569807717}
+  TotalTimeBetweenRounds: 3
+  ComboScriptP1: {fileID: 1033042059}
+  PlayerInputScriptP1: {fileID: 1033042058}
+  PromptP1:
+  - {fileID: 718556501}
+  - {fileID: 1923652900}
+  ComboScriptP2: {fileID: 1633340676}
+  PlayerInputScriptP2: {fileID: 1633340675}
+  PromptP2:
+  - {fileID: 2110085694}
+  - {fileID: 803437781}
+  tempoMostrando: 3
 --- !u!1 &1434480077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1237,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1033042057}
   - {fileID: 718556502}
   - {fileID: 1923652901}
   m_Father: {fileID: 2092241009}
@@ -1465,7 +1518,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 254.48, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577795324
 MonoBehaviour:
@@ -1499,7 +1552,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00
+  m_Text: GO
 --- !u!222 &1577795325
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1507,6 +1560,79 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577795322}
   m_CullTransparentMesh: 0
+--- !u!1 &1633340673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633340674}
+  - component: {fileID: 1633340676}
+  - component: {fileID: 1633340675}
+  m_Layer: 5
+  m_Name: ComboScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1633340674
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633340673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 990261938}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1633340675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633340673}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5efb5c7d2f52a4186e4ad539f08491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HPBarScript: {fileID: 1971283219}
+  ComboPromptScript: {fileID: 1633340676}
+  FightsScript: {fileID: 1374697985}
+  ConfirmKey: 13
+  LeftSide: 0
+  VerifyResult: 0
+--- !u!114 &1633340676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1633340673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5525bf1fad16a464baa87d187f9bc24a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FightsScript: {fileID: 1374697985}
+  ComboPromptGameObject: {fileID: 803437781}
+  ComboInput: 11010000120100001401000013010000
+  InputSprites:
+  - {fileID: 21300000, guid: 7f15a338e079a4844a789830184255ba, type: 3}
+  - {fileID: 21300000, guid: a8c24c81bf38b4a90a38b9ec318e692e, type: 3}
+  - {fileID: 21300000, guid: b548736aa5a5e40968cff64d9f43af60, type: 3}
+  - {fileID: 21300000, guid: 522340d64edec4532b1800ca793cf405, type: 3}
+  CanvasInputSprites: []
+  InputsChosen: 
 --- !u!1 &1731598069
 GameObject:
   m_ObjectHideFlags: 0
@@ -1735,15 +1861,13 @@ GameObject:
   - component: {fileID: 1923652901}
   - component: {fileID: 1923652905}
   - component: {fileID: 1923652903}
-  - component: {fileID: 1923652902}
-  - component: {fileID: 1923652904}
   m_Layer: 5
   m_Name: ComboPrompt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1923652901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1759,32 +1883,13 @@ RectTransform:
   - {fileID: 168988832}
   - {fileID: 1788280616}
   m_Father: {fileID: 1438971695}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 189, y: 51.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1923652902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1923652900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5525bf1fad16a464baa87d187f9bc24a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ComboInput: 77000000610000007300000064000000
-  InputSprites:
-  - {fileID: 21300000, guid: 4c19f3cff784ee84fb5426d8cff329c8, type: 3}
-  - {fileID: 21300000, guid: df228c60ef068464ebe618ae8ffa721e, type: 3}
-  - {fileID: 21300000, guid: 097446f2d9c86004f81bc4b495d8d36e, type: 3}
-  - {fileID: 21300000, guid: 5a110583498f858419e230250f5c8fb9, type: 3}
-  CanvasInputSprites: []
-  InputsChosen: 
 --- !u!114 &1923652903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,21 +1912,6 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
---- !u!114 &1923652904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1923652900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5efb5c7d2f52a4186e4ad539f08491, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HPBarScript: {fileID: 1971283219}
-  ComboPromptScript: {fileID: 1923652902}
-  ConfirmKey: 32
-  VerifyResult: 0
 --- !u!222 &1923652905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1925,7 +2015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fefe1c5ce6d4a14995efae86f01efd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Damage: 25
   Result: 0
   _check: 0
 --- !u!1 &2021651603
@@ -2075,7 +2165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2110085695
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2087,7 +2177,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 990261938}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2106,14 +2196,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.11836952, b: 0.68415755, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 01f6d2ae3a33be1439f8bc6b663da5db, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
