@@ -3,20 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GotoSettings : MonoBehaviour {
-
-    public void StartingGame()
+public class GotoSettings : MonoBehaviour
+{
+    public void ToSettings()
     {
         SceneManager.LoadScene("Settings");
     }
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
